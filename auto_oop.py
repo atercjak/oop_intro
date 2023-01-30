@@ -1,5 +1,3 @@
-
-
 class Auto:
     def __init__(self, model, max_speed):
         self.__model = model
@@ -23,7 +21,7 @@ class Auto:
 
     def speed_up(self, amount):
         if self.engine:
-            self.speed = min(self.engine + amount, self.max_speed)
+            self.speed = min(self.speed + amount, self.max_speed)
             print(f'Jedziesz z prędkością {self.speed}')
         else:
             print('Odpal silnik')
@@ -31,6 +29,8 @@ class Auto:
     def slow_down(self, amount):
         self.speed = max(self.speed - amount, 0)
         print(f'Jedziesz z prędkością {self.speed}')
+
+
 
 bmw = Auto('e46', 160)
 fiat = Auto('tipo', 240)
